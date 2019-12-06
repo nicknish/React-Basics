@@ -1,9 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-var name = "Nick Nish";
-var handle = "@nickjnish";
-
 // Whoa! We can mix HTML with JavaScript!
 function NameComponent(props) {
   return <h1>Name: {props.name}</h1>;
@@ -20,8 +17,8 @@ function AvatarComponent(props) {
 function App() {
   return (
     <div id="container">
-      <NameComponent name={name} />
-      <HandleComponent handle={handle} />
+      <NameComponent name="Nick" />
+      <HandleComponent handle="@nickjnish" />
       <AvatarComponent src="https://s.gravatar.com/avatar/1975ed1fb4cb3de91c17c4e6c19f2f22?s=80&r=x" />
     </div>
   );
