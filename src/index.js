@@ -5,4 +5,6 @@ import "./styles.css";
 // require("./Steps/step-3");
 // require("./Steps/step-4");
 // require("./Steps/step-5");
-require("./Exercises/exercise-1-props");
+
+// require("./Exercises/exercise-1-props");
+require("./Solutions/solution-1-props");
