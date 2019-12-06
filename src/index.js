@@ -2,6 +2,6 @@ import "./styles.css";
 import React from "react";
 import ReactDOM from "react-dom";
 
-const Header = React.createElement("h1", { id: "title" }, "Hello World");
+var headerElement = React.createElement("h1", { id: "title" }, "Nick Nish");
 
-ReactDOM.render(Header, document.getElementById("app"));
+ReactDOM.render(headerElement, document.getElementById("app"));
