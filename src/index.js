@@ -9,4 +9,5 @@ import "./styles.css";
 // require("./Exercises/exercise-1-props");
 // require("./Solutions/solution-1-props");
 
-require("./Steps/step-6");
+// require("./Steps/step-6");
+require("./Steps/step-7");
