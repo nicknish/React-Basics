@@ -5,9 +5,11 @@
   "main": "index.html",
   "scripts": {
     "start": "parcel index.html --open",
-    "build": "parcel build index.html"
+    "build": "parcel build index.html",
+    "slides": "mdx-deck ./slides/deck.mdx"
   },
   "dependencies": {
+    "mdx-deck": "3.0.13",
     "react": "16.12.0",
     "react-dom": "16.12.0"
   },
