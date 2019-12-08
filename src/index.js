@@ -11,4 +11,5 @@ import "./styles.css";
 
 // require("./Steps/step-6");
 // require("./Steps/step-7");
-require("./Steps/step-8");
+// require("./Steps/step-8");
+require("./Steps/step-9");
