@@ -1,5 +1,5 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React from 'react'
+import ReactDOM from 'react-dom'
 
 // In this example, we have a few things going on.
 // They're annotated below to see each step.
@@ -24,19 +24,19 @@ function FriendsList(props) {
         </li>
       ))}
     </ul>
-  );
+  )
 }
 
 class App extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
 
     this.state = {
-      friends: ["Jordan", "Mckenzie", "Jake"]
-    };
+      friends: ['Jordan', 'Mckenzie', 'Jake']
+    }
 
     // 2. Bind the new handleRemoveFriend method to <App />
-    this.handleRemoveFriend = this.handleRemoveFriend.bind(this);
+    this.handleRemoveFriend = this.handleRemoveFriend.bind(this)
   }
 
   // 1. Add handleRemoveFriend
@@ -46,8 +46,8 @@ class App extends React.Component {
     this.setState(currentState => {
       return {
         friends: currentState.friends.filter(friend => friend !== name)
-      };
-    });
+      }
+    })
   }
 
   render() {
@@ -57,8 +57,8 @@ class App extends React.Component {
         // 3. Pass handleRemoveFriend as a prop
         onRemoveFriend={this.handleRemoveFriend}
       />
-    );
+    )
   }
 }
 
-ReactDOM.render(<App />, document.getElementById("app"));
+ReactDOM.render(<App />, document.getElementById('app'))

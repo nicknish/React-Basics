@@ -1,17 +1,12 @@
-import React from "react";
-import ReactDOM from "react-dom";
+// KEY LESSON:
+// The ReactDOM JavaScript library uses the browser DOM to
+// render React elements. The main React library is isomorphic,
+// meaning it can be used in different "environments", such as a
+// browser (ReactDOM) or native app (React Native).
 
-var name = "Nick Nish";
-var handle = "@nickjnish";
+import React from 'react'
+import ReactDOM from 'react-dom'
 
-var headerElement = React.createElement("h1", { id: "title" }, name);
-var handleElement = React.createElement("h3", {}, handle);
+var headerElement = React.createElement('h1', { id: 'title' }, 'Nick Nish')
 
-const wrapperElement = React.createElement(
-  "div",
-  { id: "container" },
-  headerElement,
-  handleElement
-);
-
-ReactDOM.render(wrapperElement, document.getElementById("app"));
+ReactDOM.render(headerElement, document.getElementById('app'))

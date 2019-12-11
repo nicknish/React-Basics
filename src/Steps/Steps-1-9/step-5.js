@@ -1,27 +1,17 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React from 'react'
+import ReactDOM from 'react-dom'
 
-// Whoa! We can mix HTML with JavaScript!
-function NameComponent(props) {
-  return <h1>Name: {props.name}</h1>;
-}
+var name = 'Nick Nish'
+var handle = '@nickjnish'
 
-function HandleComponent(props) {
-  return <h3>Handle: {props.handle}</h3>;
-}
+var headerElement = React.createElement('h1', { id: 'title' }, name)
+var handleElement = React.createElement('h3', {}, handle)
 
-function AvatarComponent(props) {
-  return <img src={props.src} />;
-}
+const wrapperElement = React.createElement(
+  'div',
+  { id: 'container' },
+  headerElement,
+  handleElement
+)
 
-function App() {
-  return (
-    <div id="container">
-      <NameComponent name="Nick" />
-      <HandleComponent handle="@nickjnish" />
-      <AvatarComponent src="https://s.gravatar.com/avatar/1975ed1fb4cb3de91c17c4e6c19f2f22?s=80&r=x" />
-    </div>
-  );
-}
-
-ReactDOM.render(<App />, document.getElementById("app"));
+ReactDOM.render(wrapperElement, document.getElementById('app'))

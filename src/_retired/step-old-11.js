@@ -1,5 +1,5 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React from 'react'
+import ReactDOM from 'react-dom'
 
 // Add functionality to add a new friend.
 // 1. Manage input state with "controlled" input
@@ -15,50 +15,50 @@ function FriendsList(props) {
         </li>
       ))}
     </ul>
-  );
+  )
 }
 
 class App extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
 
     this.state = {
-      input: "",
-      friends: ["Jordan", "Mckenzie", "Jake"]
-    };
+      input: '',
+      friends: ['Jordan', 'Mckenzie', 'Jake']
+    }
 
     // 1. Bind handleChangeInput like always
-    this.handleChangeInput = this.handleChangeInput.bind(this);
+    this.handleChangeInput = this.handleChangeInput.bind(this)
     // 2. Bind handleAddFriend like always
-    this.handleAddFriend = this.handleAddFriend.bind(this);
-    this.handleRemoveFriend = this.handleRemoveFriend.bind(this);
+    this.handleAddFriend = this.handleAddFriend.bind(this)
+    this.handleRemoveFriend = this.handleRemoveFriend.bind(this)
   }
 
   // 1. Update input state using the inputs internal value
   handleChangeInput(event) {
-    this.setState({ input: event.target.value });
+    this.setState({ input: event.target.value })
   }
 
   // 2. Add the input value to the friends list
   handleAddFriend() {
     if (!this.state.input) {
-      return;
+      return
     }
 
     this.setState(currentState => {
       return {
         friends: [...currentState.friends, currentState.input],
-        input: ""
-      };
-    });
+        input: ''
+      }
+    })
   }
 
   handleRemoveFriend(name) {
     this.setState(currentState => {
       return {
         friends: currentState.friends.filter(friend => friend !== name)
-      };
-    });
+      }
+    })
   }
 
   render() {
@@ -80,8 +80,8 @@ class App extends React.Component {
           onRemoveFriend={this.handleRemoveFriend}
         />
       </div>
-    );
+    )
   }
 }
 
-ReactDOM.render(<App />, document.getElementById("app"));
+ReactDOM.render(<App />, document.getElementById('app'))

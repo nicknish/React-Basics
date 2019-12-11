@@ -8,9 +8,9 @@
  * 2. Open file using the File Explorer on the left
  */
 
-import "./styles.css";
+import './styles.css'
 
-require("./Steps/Steps-1-9/step-1");
+require('./Steps/Steps-1-9/step-1')
 // require("./Steps/Steps-1-9/step-2");
 // require("./Steps/Steps-1-9/step-3");
 // require("./Steps/Steps-1-9/step-4");
@@ -25,3 +25,5 @@ require("./Steps/Steps-1-9/step-1");
 // require("./Steps/Steps-1-9/step-9");
 // require("./Steps/Steps-11-19/step-10");
 // require("./Steps/Steps-11-19/step-11");
+// require("./Steps/Steps-11-19/step-12");
+// require("./Steps/Steps-11-19/step-13");

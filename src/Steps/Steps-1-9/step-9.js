@@ -1,33 +1,26 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React from 'react'
+import ReactDOM from 'react-dom'
 
-// In this example, we're having <App />
-// manage the state using React manage state
-// and passing the state to <FriendsList />
-// as props!
+function NameComponent(props) {
+  return <h1>Name: {props.name}</h1>
+}
 
-function FriendsList(props) {
+function HandleComponent(props) {
+  return <h3>Handle: {props.handle}</h3>
+}
+
+function Avatar(props) {
+  return <img src={props.src} />
+}
+
+function App() {
   return (
-    <ul>
-      {props.list.map(name => (
-        <li>{name}</li>
-      ))}
-    </ul>
-  );
+    <div id="container">
+      <NameComponent name="Nick" />
+      <HandleComponent handle="@nickjnish" />
+      <Avatar src="https://s.gravatar.com/avatar/1975ed1fb4cb3de91c17c4e6c19f2f22?s=80&r=x" />
+    </div>
+  )
 }
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      friends: ["Jordan", "Mckenzie", "Jake"]
-    };
-  }
-
-  render() {
-    return <FriendsList list={this.state.friends} />;
-  }
-}
-
-ReactDOM.render(<App />, document.getElementById("app"));
+ReactDOM.render(<App />, document.getElementById('app'))

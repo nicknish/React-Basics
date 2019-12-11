@@ -1,18 +1,19 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React from 'react'
+import ReactDOM from 'react-dom'
 
-// A React component can be a function that returns
-// a React element like so:
-// function App() {
-//   return <div>Hello world</div>;
-// }
-
-// It can also be a class! A class has the benefit
-// of managing React-managed state.
-class App extends React.Component {
-  render() {
-    return <div>Hello world</div>;
-  }
+function NameComponent(props) {
+  return React.createElement('h1', null, props.name)
 }
 
-ReactDOM.render(<App />, document.getElementById("app"));
+function HandleComponent(props) {
+  return React.createElement('h3', null, props.handle)
+}
+
+const wrapperElement = React.createElement(
+  'div',
+  { id: 'container' },
+  React.createElement(NameComponent, { name: 'Nick Nish' }),
+  React.createElement(HandleComponent, { handle: '@nickjnish' })
+)
+
+ReactDOM.render(wrapperElement, document.getElementById('app'))

@@ -1,26 +1,28 @@
-import React from "react";
-import ReactDOM from "react-dom";
+// KEY LESSON:
+// Use JSX, an "extension" to the JavaScript language, that allows
+// us to write HTML-like syntax in JavaScript. This is a perfect
+// pairing with React.
 
-// Let's combine components now!
-// We are now passing our friends list to
-// a component to render the list.
+import React from 'react'
+import ReactDOM from 'react-dom'
 
-function FriendsList(props) {
+function NameComponent(props) {
+  // return React.createElement("h1", null, props.name);
+  return <h1>{props.name}</h1>
+}
+
+function HandleComponent(props) {
+  // return React.createElement("h3", null, props.handle);
+  return <h3>{props.handle}</h3>
+}
+
+function App() {
   return (
-    <ul>
-      {props.list.map(name => (
-        <li>{name}</li>
-      ))}
-    </ul>
-  );
+    <div id="container">
+      <NameComponent name={'Nick Nish'} />
+      <HandleComponent handle={'@nickjnish'} />
+    </div>
+  )
 }
 
-class App extends React.Component {
-  render() {
-    const friends = ["Jordan", "Mckenzie", "Jake"];
-
-    return <FriendsList list={friends} />;
-  }
-}
-
-ReactDOM.render(<App />, document.getElementById("app"));
+ReactDOM.render(<App />, document.getElementById('app'))

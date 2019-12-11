@@ -1,27 +1,11 @@
-// We can use JSX, an extension to JavaScript, that allows
-// us to write HTML-like syntax in JavaScript.
+import React from 'react'
+import ReactDOM from 'react-dom'
 
-import React from "react";
-import ReactDOM from "react-dom";
+var name = 'Nick Nish'
+var handle = '@nickjnish'
 
-var name = "Nick Nish";
-var handle = "@nickjnish";
+var headerElement = React.createElement('h1', { id: 'title' }, name)
+// How do we add a second element?
+var handleElement = React.createElement('h3', {}, handle)
 
-function NameComponent(props) {
-  return <h1>{props.name}</h1>;
-}
-
-function HandleComponent(props) {
-  return <h3>{props.handle}</h3>;
-}
-
-function App() {
-  return (
-    <div id="container">
-      <NameComponent name={name} />
-      <HandleComponent handle={handle} />
-    </div>
-  );
-}
-
-ReactDOM.render(<App />, document.getElementById("app"));
+ReactDOM.render(headerElement, document.getElementById('app'))
