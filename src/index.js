@@ -23,10 +23,10 @@ require('./Steps/Steps-1-9/step-1')
 // require("./Steps/Steps-1-9/step-7");
 // require("./Steps/Steps-1-9/step-8");
 // require("./Steps/Steps-1-9/step-9");
-// require("./Steps/Steps-11-19/step-10");
-// require("./Steps/Steps-11-19/step-11");
-// require("./Steps/Steps-11-19/step-12");
-// require("./Steps/Steps-11-19/step-13");
+// require("./Steps/Steps-10-19/step-10");
+// require("./Steps/Steps-10-19/step-11");
+// require("./Steps/Steps-10-19/step-12");
+// require("./Steps/Steps-10-19/step-13");
 
 // TODO:
 // - Step for adding styling by adding classNames
