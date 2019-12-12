@@ -23,7 +23,7 @@ function App() {
       <Profile
         name="Shane Rogers"
         handle="@shanerogers"
-        image="https://cataas.com/c"
+        image="https://source.unsplash.com/random"
       />
       <Profile
         name="Andrew Wen"

@@ -1,3 +1,64 @@
 body {
   font-family: sans-serif;
 }
+
+#container {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.profile {
+  display: flex;
+  align-content: center;
+  margin-bottom: 10px;
+}
+
+.avatar {
+  height: 60px;
+  width: 100%;
+  max-width: 60px;
+  border-radius: 50%;
+}
+
+.profile-info {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 8px;
+}
+
+.name {
+  margin-top: 0;
+  margin-bottom: 4px;
+  font-size: 18px;
+}
+
+.handle {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.btn-container {
+  display: flex;
+  align-items: center;
+  margin-left: 16px;
+}
+
+.btn {
+  padding: 4px 8px;
+  max-height: 25px;
+  border-radius: 4px;
+  background: #ff674c;
+  border: 1px solid #dd5840;
+  color: white;
+  cursor: pointer;
+  transition: opacity 200ms ease;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
