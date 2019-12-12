@@ -27,9 +27,11 @@ require('./Steps/Steps-1-9/step-1')
 // require("./Steps/Steps-10-19/step-11");
 // require("./Steps/Steps-10-19/step-12");
 // require("./Steps/Steps-10-19/step-13");
+// require("./Steps/Steps-10-19/step-14");
+// require("./Steps/Steps-10-19/step-15");
+// require("./Steps/Steps-10-19/step-16");
+require('./Steps/Steps-10-19/step-17')
 
 // TODO:
-// - Step for adding styling by adding classNames
-// - Add buttons for removing a friend
 // - Add text input and submit button for adding a friend
 // - Add open-source library step

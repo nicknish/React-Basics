@@ -32,7 +32,7 @@ class App extends React.Component {
   handleRemoveFriend(name) {
     this.setState(currentState => {
       return {
-        friends: currentState.friends.filter(friend => friend.name === name)
+        friends: currentState.friends.filter(friend => friend.name !== name)
       }
     })
   }
@@ -46,7 +46,7 @@ class App extends React.Component {
               name={friend.name}
               handle={friend.handle}
               image={friend.image}
-              onRemoveFriend={this.handleRemoveFriend}
+              onRemoveFriend={() => this.handleRemoveFriend(friend.name)}
             />
           )
         })}
