@@ -1,3 +1,6 @@
+// Let's start mixing data, HTML, and static content
+// and add an image!
+
 import React from 'react'
 import ReactDOM from 'react-dom'
 

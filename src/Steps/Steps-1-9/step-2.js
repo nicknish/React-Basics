@@ -1,4 +1,5 @@
 // KEY LESSON:
+//
 // The ReactDOM JavaScript library uses the browser DOM to
 // render React elements. The main React library is isomorphic,
 // meaning it can be used in different "environments", such as a

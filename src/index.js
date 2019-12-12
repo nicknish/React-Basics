@@ -11,12 +11,12 @@
 import './styles.css'
 
 // require('./Steps/Steps-1-9/step-1')
-// require("./Steps/Steps-1-9/step-2");
+// require('./Steps/Steps-1-9/step-2')
 // require("./Steps/Steps-1-9/step-3");
-// require("./Steps/Steps-1-9/step-4");
-// require("./Steps/Steps-1-9/step-5");
+// require('./Steps/Steps-1-9/step-4')
+// require('./Steps/Steps-1-9/step-5')
 
-// require("./Exercises/exercise-1-props");
+// require('./Exercises/exercise-1-props')
 // require("./Solutions/solution-1-props");
 
 // require("./Steps/Steps-1-9/step-6");
@@ -35,5 +35,7 @@ import './styles.css'
 // require('./Steps/Steps-10-19/step-19')
 // require('./Steps/Steps-20-29/step-20')
 // require('./Steps/Steps-20-29/step-21')
+// require('./Steps/Steps-20-29/step-22')
+require('./Steps/Steps-20-29/step-23')
 
-require('./Fun/dashboards')
+// require('./Fun/dashboards')

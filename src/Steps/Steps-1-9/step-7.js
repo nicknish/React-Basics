@@ -1,3 +1,10 @@
+// KEY LESSON
+//
+// How do we pass data to Components? We pass them as "props".
+// This is uni-directional data-flow (or 1-way data-flow).
+// This makes it much easier to reason about where the data
+// is coming from.
+
 import React from 'react'
 import ReactDOM from 'react-dom'
 

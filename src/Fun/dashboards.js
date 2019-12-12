@@ -5,10 +5,7 @@ import _ from 'lodash'
 import 'c3/c3.css'
 
 const data = {
-  columns: [
-    // ['data1', 30, 200, 100, 400, 150, 250],
-    ['data2', 50, 20, 10, 40, 15, 25]
-  ]
+  columns: [['data2', 50, 20, 10, 40, 15, 25]]
 }
 
 class Dashboards extends React.Component {

@@ -1,4 +1,5 @@
 // KEY LESSON:
+//
 // Use JSX, an "extension" to the JavaScript language, that allows
 // us to write HTML-like syntax in JavaScript. This is a perfect
 // pairing with React.
