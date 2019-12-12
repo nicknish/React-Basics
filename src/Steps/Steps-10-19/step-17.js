@@ -20,15 +20,15 @@ class App extends React.Component {
         },
         {
           name: 'Andrew Wen',
-          handle: '@andrew.wen',
+          handle: '@andrewwen',
           image: 'https://cataas.com/c'
         }
       ]
     }
-
-    this.handleRemoveFriend = this.handleRemoveFriend.bind(this)
   }
 
+  // Add a method to remove the friend to our class
+  // But this doens't work yet...
   handleRemoveFriend(name) {
     this.setState(currentState => {
       return {
@@ -46,6 +46,9 @@ class App extends React.Component {
               name={friend.name}
               handle={friend.handle}
               image={friend.image}
+              // Pass our method as props.
+              // We're calling our method inside an anonymous function
+              // so we can pass in the correct data.
               onRemoveFriend={() => this.handleRemoveFriend(friend.name)}
             />
           )
@@ -64,7 +67,8 @@ function Profile(props) {
         <p className="handle">{props.handle}</p>
       </div>
       <div className="btn-container">
-        <button className="btn" onClick={props.onRemoveFriend}>
+        {/* Use the onRemoveFriend prop */}
+        <button className="btn-remove" onClick={props.onRemoveFriend}>
           Remove
         </button>
       </div>

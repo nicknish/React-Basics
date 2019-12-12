@@ -1,6 +1,3 @@
-// Let's add a way to remove a friend.
-// First let's add the UI.
-
 import React from 'react'
 import ReactDOM from 'react-dom'
 
@@ -9,6 +6,7 @@ class App extends React.Component {
     super(props)
 
     this.state = {
+      input: '',
       friends: [
         {
           name: 'Nick Nish',
@@ -28,17 +26,61 @@ class App extends React.Component {
         }
       ]
     }
+
+    this.handleInput = this.handleInput.bind(this)
+    this.handleAddFriend = this.handleAddFriend.bind(this)
+    this.handleRemoveFriend = this.handleRemoveFriend.bind(this)
+  }
+
+  handleInput(event) {
+    this.setState({ input: event.target.value })
+  }
+
+  handleAddFriend() {
+    this.setState(currentState => {
+      return {
+        // Clear input upon submit
+        input: '',
+        friends: currentState.friends.concat({
+          name: this.state.input,
+          handle: '@' + this.state.input,
+          image: 'https://source.unsplash.com/random'
+        })
+      }
+    })
+  }
+
+  handleRemoveFriend(name) {
+    this.setState(currentState => {
+      return {
+        friends: currentState.friends.filter(friend => friend.name !== name)
+      }
+    })
   }
 
   render() {
     return (
       <div id="container">
+        <div className="form">
+          <input
+            type="text"
+            className="form-input"
+            placeholder="Add..."
+            value={this.state.input}
+            onChange={this.handleInput}
+          />
+          <button className="form-btn" onClick={this.handleAddFriend}>
+            Add
+          </button>
+        </div>
+
         {this.state.friends.map(friend => {
           return (
             <Profile
               name={friend.name}
               handle={friend.handle}
               image={friend.image}
+              onRemoveFriend={() => this.handleRemoveFriend(friend.name)}
             />
           )
         })}
@@ -56,8 +98,9 @@ function Profile(props) {
         <p className="handle">{props.handle}</p>
       </div>
       <div className="btn-container">
-        {/* How do we update the state to remove the friend? */}
-        <button className="btn-remove">Remove</button>
+        <button className="btn-remove" onClick={props.onRemoveFriend}>
+          Remove
+        </button>
       </div>
     </div>
   )

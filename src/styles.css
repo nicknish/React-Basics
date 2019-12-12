@@ -1,5 +1,6 @@
 body {
   font-family: sans-serif;
+  padding: 40px;
 }
 
 #container {
@@ -48,7 +49,7 @@ body {
   margin-left: 16px;
 }
 
-.btn {
+.btn-remove {
   padding: 4px 8px;
   max-height: 25px;
   border-radius: 4px;
@@ -59,6 +60,32 @@ body {
   transition: opacity 200ms ease;
 }
 
-.btn:hover {
+.btn-remove:hover {
+  opacity: 0.8;
+}
+
+.form {
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.form-input {
+  flex: 1;
+  padding: 4px 8px;
+  font-size: 18px;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.form-btn {
+  display: inline-block;
+  padding: 4px 8px;
+  margin-left: 8px;
+  border-radius: 4px;
+  transition: opacity 200ms ease;
+  background: skyblue;
+}
+
+.form-btn:hover {
   opacity: 0.8;
 }

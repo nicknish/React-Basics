@@ -1,6 +1,3 @@
-// Let's add a way to remove a friend.
-// First let's add the UI.
-
 import React from 'react'
 import ReactDOM from 'react-dom'
 
@@ -28,6 +25,17 @@ class App extends React.Component {
         }
       ]
     }
+
+    // We have to bind the `this` to App
+    this.handleRemoveFriend = this.handleRemoveFriend.bind(this)
+  }
+
+  handleRemoveFriend(name) {
+    this.setState(currentState => {
+      return {
+        friends: currentState.friends.filter(friend => friend.name !== name)
+      }
+    })
   }
 
   render() {
@@ -39,6 +47,7 @@ class App extends React.Component {
               name={friend.name}
               handle={friend.handle}
               image={friend.image}
+              onRemoveFriend={() => this.handleRemoveFriend(friend.name)}
             />
           )
         })}
@@ -56,8 +65,9 @@ function Profile(props) {
         <p className="handle">{props.handle}</p>
       </div>
       <div className="btn-container">
-        {/* How do we update the state to remove the friend? */}
-        <button className="btn-remove">Remove</button>
+        <button className="btn-remove" onClick={props.onRemoveFriend}>
+          Remove
+        </button>
       </div>
     </div>
   )
