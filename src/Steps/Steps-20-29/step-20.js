@@ -37,10 +37,10 @@ class App extends React.Component {
 
   handleAddFriend() {
     this.setState(currentState => {
-      var handle = '@' + name
+      var handle = '@' + this.state.input
       return {
         friends: currentState.friends.concat({
-          name: name,
+          name: this.state.input,
           handle: handle,
           image: 'https://avatars.io/twitter/' + handle
         })
