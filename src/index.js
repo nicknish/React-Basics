@@ -33,8 +33,7 @@ import './styles.css'
 // require('./Steps/Steps-10-19/step-17')
 // require('./Steps/Steps-10-19/step-18')
 // require('./Steps/Steps-10-19/step-19')
-require('./Steps/Steps-20-29/step-20')
+// require('./Steps/Steps-20-29/step-20')
 // require('./Steps/Steps-20-29/step-21')
 
-// TODO:
-// - Add open-source library step
+require('./Fun/dashboards')
