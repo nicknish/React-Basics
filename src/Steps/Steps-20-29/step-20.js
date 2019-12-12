@@ -11,13 +11,12 @@ class App extends React.Component {
         {
           name: 'Nick Nish',
           handle: '@nickjnish',
-          image:
-            'https://s.gravatar.com/avatar/1975ed1fb4cb3de91c17c4e6c19f2f22?s=80&r=x'
+          image: 'https://avatars.io/twitter/@nickjnish'
         },
         {
           name: 'Shane Rogers',
           handle: '@shanerogers',
-          image: 'https://source.unsplash.com/random'
+          image: 'https://avatars.io/twitter/@shanedjrogers'
         },
         {
           name: 'Andrew Wen',
@@ -38,11 +37,12 @@ class App extends React.Component {
 
   handleAddFriend() {
     this.setState(currentState => {
+      var handle = '@' + name
       return {
         friends: currentState.friends.concat({
-          name: this.state.input,
-          handle: '@' + this.state.input,
-          image: 'https://source.unsplash.com/random'
+          name: name,
+          handle: handle,
+          image: 'https://avatars.io/twitter/' + handle
         })
       }
     })

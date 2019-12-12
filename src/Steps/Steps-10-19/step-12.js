@@ -16,13 +16,12 @@ function App() {
     {
       name: 'Nick Nish',
       handle: '@nickjnish',
-      image:
-        'https://s.gravatar.com/avatar/1975ed1fb4cb3de91c17c4e6c19f2f22?s=80&r=x'
+      image: 'https://avatars.io/twitter/@nickjnish'
     },
     {
       name: 'Shane Rogers',
       handle: '@shanerogers',
-      image: 'https://source.unsplash.com/random'
+      image: 'https://avatars.io/twitter/@shanedjrogers'
     },
     {
       name: 'Andrew Wen',

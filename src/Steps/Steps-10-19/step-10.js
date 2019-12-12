@@ -31,7 +31,7 @@ function App() {
       <Profile
         name="Nick Nish"
         handle="@nickjnish"
-        image="https://s.gravatar.com/avatar/1975ed1fb4cb3de91c17c4e6c19f2f22?s=80&r=x"
+        image="https://avatars.io/twitter/@nickjnish"
       />
     </div>
   )

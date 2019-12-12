@@ -18,7 +18,7 @@ function App() {
     <div id="container">
       <NameComponent name="Nick" />
       <HandleComponent handle="@nickjnish" />
-      <Avatar src="https://s.gravatar.com/avatar/1975ed1fb4cb3de91c17c4e6c19f2f22?s=80&r=x" />
+      <Avatar src="https://avatars.io/twitter/@nickjnish" />
     </div>
   )
 }
